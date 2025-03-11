@@ -1,3 +1,43 @@
+# weatherOz 2.0.0
+
+## Breaking changes
+
+* Functions `get_ag_bulletin()` and `parse_ag_bulletin()` have been defunct because the underlying BOM agricultural bulletin service is no longer available. This removal constitutes a breaking change; please update your code accordingly.
+
+* Documentation has been updated to reflect the removal of the `get_ag_bulletin()` and `parse_ag_bulletin()` functions.
+
+* Tests for the `get_ag_bulletin()` and `parse_ag_bulletin()` functions now errors given that the functions are now defunct.
+
+## Bug fixes
+
+* Fixes [Issue 90](https://github.com/ropensci/weatherOz/issues/90) with the `get_dpird_summaries()` function where tests had fixed dates and errors were generated. The tests `test-get_dpird_summaries.R` have been updated to use previous year from the current date and the tests now pass.
+
+* Fixes other bugs with the `find_stations_in()` and function where the function would not return the correct number of stations, given recent adjustments to the weather station infrastructure.
+
+## Additional fixes and improvements:
+
+* Re-documented package to reflect changes
+
+* Updated test vcr cassette/fixtures
+
+* Updated BOM-related vignette
+
+* Updated WORDLIST for spelling checks
+
+# weatherOz 1.0.0.9000
+
+## Bug Fixes
+
+* Provides useful feedback when users provide a `NULL` API key value.
+
+* Fixes [Issue 82](https://github.com/ropensci/weatherOz/issues/82) where Average wind speed data extracted using `get_dpird_summaries()` is ranked from lowest to highest and does not match the observation recorded at that time from DPIRD summaries, thanks to @alycest.
+
+* Fixes [Issue 83](https://github.com/ropensci/weatherOz/issues/83) where average wind direction data extracted using `get_dpird_summaries()` do not match the observation average wind direction recorded at that time in DPIRD summaries, thanks to @alycest.
+
+* Fixes an error in documentation about the number of types of objects accepted by `find_stations_in()`.
+
+* Fixes a [typo in the README](https://github.com/ropensci/weatherOz/commit/0c544acd4651fa16a3a3dc2e3e24addf5d41187d) that provided incorrect arguments for `get_key()`, thanks to @johnbaums.
+
 # weatherOz 1.0.0
 
 ## Major Changes

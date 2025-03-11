@@ -112,7 +112,7 @@ test_that("get_dpird_summaries() returns yearly values",
               )
             })
             expect_s3_class(x, "data.table")
-            expect_length(x, 11)
+            expect_identical(dim(x), c(4L, 11L))
             expect_named(
               x,
               c(
@@ -150,7 +150,7 @@ test_that("get_dpird_summaries() returns monthly values",
               )
             })
             expect_s3_class(x, "data.table")
-            expect_length(x, 13)
+            expect_identical(dim(x), c(26L, 13L))
             expect_named(
               x,
               c(
@@ -193,7 +193,7 @@ test_that("get_dpird_summaries() returns daily values",
               )
             })
             expect_s3_class(x, "data.table")
-            expect_length(x, 14)
+            expect_identical(dim(x), c(4L, 14L))
             expect_named(
               x,
               c(
@@ -238,7 +238,7 @@ test_that("get_dpird_summaries() returns hourly values",
               )
             })
             expect_s3_class(x, "data.table")
-            expect_length(x, 17)
+            expect_identical(dim(x), c(50L, 17L))
             expect_named(
               x,
               c(
@@ -279,15 +279,15 @@ test_that("get_dpird_summaries() returns 30min values",
               skip_if_offline()
               x <- get_dpird_summaries(
                 station_code = "BI",
-                start_date = "20231028",
-                end_date = "20231028",
+                start_date = paste0(format(Sys.Date() - 365, "%Y"), "1028"),
+                end_date = paste0(format(Sys.Date() - 365, "%Y"), "1028"),
                 api_key = Sys.getenv("DPIRD_API_KEY"),
                 interval = "30min",
                 values = "wind"
               )
             })
             expect_s3_class(x, "data.table")
-            expect_equal(ncol(x), 18)
+            expect_identical(dim(x), c(4L, 18L))
             expect_named(
               x,
               c(
@@ -332,15 +332,15 @@ test_that("get_dpird_summaries() returns 15min values",
               skip_if_offline()
               x <- get_dpird_summaries(
                 station_code = "BI",
-                start_date = "20231028",
-                end_date = "20231028",
+                start_date = paste0(format(Sys.Date()-365, "%Y"), "1028"),
+                end_date = paste0(format(Sys.Date()-365, "%Y"), "1028"),
                 api_key = Sys.getenv("DPIRD_API_KEY"),
                 interval = "15min",
                 values = "wind"
               )
             })
             expect_s3_class(x, "data.table")
-            expect_equal(ncol(x), 18)
+            expect_identical(dim(x), c(8L, 18L))
             expect_named(
               x,
               c(

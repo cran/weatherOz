@@ -1,6 +1,6 @@
 Package: weatherOz
 Title: An API Client for Australian Weather and Climate Data Resources
-Version: 1.0.0
+Version: 2.0.0
 Authors@R: c(
     person("Rodrigo", "Pires", , "rodrigo.pires@dpird.wa.gov.au", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-7384-6849")),
@@ -41,7 +41,7 @@ Description: Provides automated downloading, parsing and formatting of
     Western Australia and by the Science and Technology Division of the
     Queensland Government's Department of Environment and Science ('DES').
     As well as the Bureau of Meteorology ('BOM') of the Australian
-    government precis and coastal forecasts, agriculture bulletin data,
+    government precis and coastal forecasts,
     and downloading and importing radar and satellite imagery files.
     'DPIRD' weather data are accessed through public 'APIs' provided by
     'DPIRD', <https://www.agric.wa.gov.au/weather-api-20>, providing
@@ -87,7 +87,7 @@ X-schema.org-keywords: dpird, bom, meteorological-data,
         australia-bureau-of-meteorology, western-australia-agriculture,
         australia-agriculture, australia-climate, australia-weather
 NeedsCompilation: no
-Packaged: 2024-07-22 04:53:09 UTC; dpird-mac
+Packaged: 2025-03-10 09:03:58 UTC; dpird-mac
 Author: Rodrigo Pires [aut, cre] (<https://orcid.org/0000-0001-7384-6849>),
   Anna Hepworth [aut] (<https://orcid.org/0000-0003-0204-6347>),
   Rebecca O'Leary [aut],
@@ -118,4 +118,4 @@ Author: Rodrigo Pires [aut, cre] (<https://orcid.org/0000-0001-7384-6849>),
   Curtin University [cph]
 Maintainer: Rodrigo Pires <rodrigo.pires@dpird.wa.gov.au>
 Repository: CRAN
-Date/Publication: 2024-07-26 19:40:02 UTC
+Date/Publication: 2025-03-11 13:40:02 UTC

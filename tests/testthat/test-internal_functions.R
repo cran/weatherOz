@@ -95,8 +95,18 @@ test_that(".check_lonlat() returns invisible `NULL` if no errors encountered", {
 test_that("check user-input for `which_api`", {
   expect_error(.check_which_api(which_api = "none"))
   for (i in c("all", "silo", "dpird")) {
-    expect_equal(i, .check_which_api(which_api = i))
+    expect_identical(i, .check_which_api(which_api = i))
   }
+})
+
+## Test that the user didn't provide a `NULL` value for an API Key
+
+test_that("check user-input for a SILO API key isn't `NULL`", {
+  expect_error(.is_valid_email_silo_api_key(.api_key = NULL))
+})
+
+test_that("check user-input for a DPIRD API key isn't `NULL`", {
+  expect_error(.is_valid_dpird_api_key(.api_key = NULL))
 })
 
 ## .check_lon_lat() ----
@@ -115,14 +125,14 @@ test_that(".check_states() will return reasonable values", {
 ## .convert_state() ----
 
 test_that(".convert_state() will return the proper match", {
-  expect_equal(.convert_state(state = "WA"), "WA")
-  expect_equal(.convert_state(state = "Western Australia"), "WA")
+  expect_identical(.convert_state(state = "WA"), "WA")
+  expect_identical(.convert_state(state = "Western Australia"), "WA")
   expect_error(.convert_state(state = "Kansas"))
 })
 
 ## .set_snake_case_names() ----
 test_that(".snake_case_names() converts CamelCase colnames to snake_case", {
   x <- data.table("UpperCase" = 1)
-  expect_equal(names(.set_snake_case_names(x)), "upper_case")
+  expect_named(.set_snake_case_names(x), "upper_case")
   expect_error(.set_snake_case_names(c("UpperCase" = 1)))
 })
