@@ -1,6 +1,6 @@
 Package: weatherOz
 Title: An API Client for Australian Weather and Climate Data Resources
-Version: 2.0.0
+Version: 2.0.1
 Authors@R: c(
     person("Rodrigo", "Pires", , "rodrigo.pires@dpird.wa.gov.au", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-7384-6849")),
@@ -87,7 +87,7 @@ X-schema.org-keywords: dpird, bom, meteorological-data,
         australia-bureau-of-meteorology, western-australia-agriculture,
         australia-agriculture, australia-climate, australia-weather
 NeedsCompilation: no
-Packaged: 2025-03-10 09:03:58 UTC; dpird-mac
+Packaged: 2025-04-16 03:11:12 UTC; dpird-mac
 Author: Rodrigo Pires [aut, cre] (<https://orcid.org/0000-0001-7384-6849>),
   Anna Hepworth [aut] (<https://orcid.org/0000-0003-0204-6347>),
   Rebecca O'Leary [aut],
@@ -118,4 +118,4 @@ Author: Rodrigo Pires [aut, cre] (<https://orcid.org/0000-0001-7384-6849>),
   Curtin University [cph]
 Maintainer: Rodrigo Pires <rodrigo.pires@dpird.wa.gov.au>
 Repository: CRAN
-Date/Publication: 2025-03-11 13:40:02 UTC
+Date/Publication: 2025-04-16 04:50:02 UTC
