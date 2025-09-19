@@ -1,3 +1,31 @@
+# weatherOz 2.0.2
+
+**CRAN Re-submission** - Maintenance release addressing archival issues
+
+## Bug fixes
+* Made station count tests more flexible to accommodate natural changes in weather station networks over time, using ranges instead of exact counts.
+
+* Fixed compatibility with `crul` 1.6.0 by updating minimum `vcr` requirement to 2.0.0, resolving VCR cassette testing issues caused by deprecated `mock()` function.
+
+* URL updates following DPIRD IT system migration:
+  * API endpoints: Maintained on `api.agric.wa.gov.au`
+  * Updated DPIRD API documentation URLs: `agric.wa.gov.au/apis/api-terms-and-conditions` to `dpird.wa.gov.au/online-tools/apis/api-terms-and-conditions/` and `agric.wa.gov.au/form/dpird-api-registration` to `dpird.wa.gov.au/forms/dpird-api-registration/`
+  * Updated displaced URL: `pulseaus.com.au/about/australian-pulse-industry` to `grainsaustralia.com.au`
+  * Updated all references in vignettes, README files, and function documentation
+
+## Additional fixes and improvements:
+* Addressed CRAN request to "remove the single quotes around every term in the description that is not a package/software/API name" and removed examples for unexported functions.
+
+* Addressed CRAN URL check issues by updating all redirected links to their new working locations.
+
+* Updated all man pages with corrected URLs; Fixed all broken links in README and vignettes.
+
+* Added `@importFrom curl` directives for all curl functions used in the package to resolve import warnings.
+
+* Flexible station count testing: Made tests more resilient by using ranges instead of exact station counts.
+  * Accommodates natural changes in weather station networks over time
+  * Prevents test failures due to minor station count variations
+
 # weatherOz 2.0.1
 
 ## Minor changes
