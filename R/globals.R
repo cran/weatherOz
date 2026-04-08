@@ -12,11 +12,6 @@ utils::globalVariables(c(
   "start", # <.get_silo_stations>
   "end", # <.get_silo_stations>
   "wmo", # <.get_silo_stations>
-  "obs_time_local", # <.parse_bulletin>
-  "obs_time_utc", # <.parse_bulletin>
-  "r", # <.parse_bulletin>
-  "state", # <.parse_bulletin>
-  "product_id", # <.parse_bulletin>
   "station_code", # <.get_bom_metadata>
   "station_name", # <.get_bom_metadata>
   "start", # <.get_bom_metadata>
@@ -40,6 +35,7 @@ utils::globalVariables(c(
   "warning_summary_footer", # <.parse_coastal_xml>
   "product_footer", # <.parse_coastal_xml>
   "postamble", # <.parse_coastal_xml>
+  "wind_avg", # <get_dpird_apsim>
   "day", # <get_dpird_apsim>
   "period", # <.parse_availability>
   "date_time", # <get_dpird_minute>
@@ -49,10 +45,27 @@ utils::globalVariables(c(
   "period.to", # <get_dpird_summaries>
   "station_code", # <.parse_summary>
   "station_name", # <.parse_summary>
+  ".row_id", # <.parse_summary>
+  ".sub_index", # <.parse_summary>
+  "..multi_list_names", # <.parse_summary>
   "period_day", # <.set_col_orders>
   "period_hour", # <.set_col_orders>
   "period_minute", # <.set_col_orders>
   "period_month", # <.set_col_orders>
+  "wind_height", # <.widen_wind_height_cols>
+  "..group_cols", # <.widen_wind_height_cols>
+  "time", # <metno_timeseries_to_data_table>
+  "time", # <metno_resample_data_table>
+  "air_temperature", # <metno_resample_data_table>
+  "relative_humidity", # <metno_resample_data_table>
+  "wind_speed", # <metno_resample_data_table>
+  "wind_from_direction", # <metno_resample_data_table>
+  "cloud_area_fraction", # <metno_resample_data_table>
+  "air_pressure_at_sea_level", # <metno_resample_data_table>
+  "precipitation_amount", # <metno_resample_data_table>
+  "symbol_code", # <metno_resample_data_table>
+  "week_start", # <metno_resample_data_table>
+  "month_start", # <metno_resample_data_table>
   "state", # <.parse_precis_forecast>
   "product_id", # <.parse_precis_forecast>
   "probability_of_precipitation", # <.parse_precis_forecast>
@@ -70,6 +83,9 @@ utils::globalVariables(c(
   "values", # <.check_silo_values>
   "start_time_local", # <.split_time_cols>
   "end_time_local", # <.split_time_cols>
+  "wind_max_date", # <.prepare_wind_time_columns>
+  "wind_max_time", # <.prepare_wind_time_columns>
+  "wind_max_time_of_day", # <.prepare_wind_time_columns>
   "station_code", # <.query_silo_api>
   "station_name", # <.query_silo_api>
   "owner", # <.query_silo_api>

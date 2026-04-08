@@ -69,7 +69,7 @@ functionality any longer due to issues with \acronym{CRAN} and
 \CRANpkg{hoardr}.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # Fetch AHI VIS (true colour) / IR (Ch13 greyscale) composite 1km FD
 # GEOS GIS {terra} `SpatRaster`` object for most recent single scan
  available
@@ -87,25 +87,22 @@ plot(imagery)
 }
 \references{
 Australian Bureau of Meteorology (\acronym{BOM}) high-definition satellite
-images \cr \url{http://www.bom.gov.au/australia/satellite/index.shtml}.
+images \cr \url{https://www.bom.gov.au/australia/satellite/index.shtml}.
 }
 \seealso{
 \code{\link[=get_available_imagery]{get_available_imagery()}}
 
 Other BOM: 
 \code{\link{find_forecast_towns}()},
-\code{\link{get_ag_bulletin}()},
 \code{\link{get_available_imagery}()},
 \code{\link{get_available_radar}()},
 \code{\link{get_coastal_forecast}()},
 \code{\link{get_precis_forecast}()},
 \code{\link{get_radar_imagery}()},
-\code{\link{parse_ag_bulletin}()},
 \code{\link{parse_coastal_forecast}()},
 \code{\link{parse_precis_forecast}()}
 
 Other data fetching: 
-\code{\link{get_ag_bulletin}()},
 \code{\link{get_coastal_forecast}()},
 \code{\link{get_data_drill}()},
 \code{\link{get_data_drill_apsim}()},
@@ -113,6 +110,8 @@ Other data fetching:
 \code{\link{get_dpird_extremes}()},
 \code{\link{get_dpird_minute}()},
 \code{\link{get_dpird_summaries}()},
+\code{\link{get_metno_daily_forecast}()},
+\code{\link{get_metno_forecast}()},
 \code{\link{get_patched_point}()},
 \code{\link{get_patched_point_apsim}()},
 \code{\link{get_precis_forecast}()},

@@ -191,13 +191,14 @@ Other SILO:
 \code{\link{silo_daily_values}}
 
 Other data fetching: 
-\code{\link{get_ag_bulletin}()},
 \code{\link{get_coastal_forecast}()},
 \code{\link{get_data_drill_apsim}()},
 \code{\link{get_dpird_apsim}()},
 \code{\link{get_dpird_extremes}()},
 \code{\link{get_dpird_minute}()},
 \code{\link{get_dpird_summaries}()},
+\code{\link{get_metno_daily_forecast}()},
+\code{\link{get_metno_forecast}()},
 \code{\link{get_patched_point}()},
 \code{\link{get_patched_point_apsim}()},
 \code{\link{get_precis_forecast}()},

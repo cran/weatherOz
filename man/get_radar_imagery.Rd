@@ -36,7 +36,7 @@ Valid \acronym{BOM} \acronym{Radar} Product IDs for radar imagery
 can be obtained from \code{\link[=get_available_radar]{get_available_radar()}}.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 
 # Fetch most recent radar image for Wollongong 256km radar
 imagery <- get_radar_imagery(product_id = "IDR032")
@@ -45,25 +45,22 @@ imagery
 }
 \references{
 Australian Bureau of Meteorology (\acronym{BOM}) radar images\cr
-\url{http://www.bom.gov.au/australia/radar/}
+\url{https://www.bom.gov.au/weather-and-climate/rain-radar-and-weather-maps}
 }
 \seealso{
 \code{\link[=get_available_radar]{get_available_radar()}}
 
 Other BOM: 
 \code{\link{find_forecast_towns}()},
-\code{\link{get_ag_bulletin}()},
 \code{\link{get_available_imagery}()},
 \code{\link{get_available_radar}()},
 \code{\link{get_coastal_forecast}()},
 \code{\link{get_precis_forecast}()},
 \code{\link{get_satellite_imagery}()},
-\code{\link{parse_ag_bulletin}()},
 \code{\link{parse_coastal_forecast}()},
 \code{\link{parse_precis_forecast}()}
 
 Other data fetching: 
-\code{\link{get_ag_bulletin}()},
 \code{\link{get_coastal_forecast}()},
 \code{\link{get_data_drill}()},
 \code{\link{get_data_drill_apsim}()},
@@ -71,6 +68,8 @@ Other data fetching:
 \code{\link{get_dpird_extremes}()},
 \code{\link{get_dpird_minute}()},
 \code{\link{get_dpird_summaries}()},
+\code{\link{get_metno_daily_forecast}()},
+\code{\link{get_metno_forecast}()},
 \code{\link{get_patched_point}()},
 \code{\link{get_patched_point_apsim}()},
 \code{\link{get_precis_forecast}()},
